@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #c88e57;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+.part1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #c88e57;
+  color: #fff;
+}
+.part2 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(92, 176, 250);
+}
+
+.top-con {
+  position: absolute;
+  top: 7%;
+  text-align: center;
+  /* background-color: red; */
+  perspective: 800px;
+  perspective-origin: top;
+  z-index: 2; /* Make sure the text is above the video */
+  width: 100%;
+}
+.top-content {
+  position: relative;
+  transform: rotateX(0deg);
+  /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+}
+.top-con h1 {
+  font-size: 4vw;
+  line-height: 4vw;
+}
+.btm-con {
+  position: absolute;
+  bottom: 12%;
+  perspective: 800px;
+  perspective-origin: bottom;
+}
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* background-color: blue; */
+  transform: rotateX(0deg);
+  /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+}
+
+.btm-con h1 {
+  font-size: 5vw;
+}
+.btm-con p {
+  font-size: 0.8vw;
+  width: 50%;
+}
+
+.img {
+  /* width: 50%;
+  height: 50%; */
+  /* background-color: orange; */
+  /* background: url(./images/nature.jpg);
+  background-position: center;
+  background-size: cover; */
+  /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
+
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .top-con h1 {
+    font-size: 12vw;
+    line-height: 7vh;
+  }
+  .btm-con h1 {
+    font-size: 12vw;
+    line-height: 7vh;
+  }
+  .btm-con p {
+    font-size: 12px;
+    width: 80%;
+  }
+  .top-con {
+    /* position: absolute; */
+    top: 15%;
+  }
+}
+
+.nature-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+}
